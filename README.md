@@ -1,22 +1,23 @@
-﻿GCFramework
+﻿OpenGL - UFAL Art Gallery
 ===========
 
-Framework JOGL para criação de "toy examples" ou projetos de computação gráfica.
+Using Open to render UFAL Art Gallery.
 
 
-INSTALAÇÃO------------------------
+Instalação
+==
 
-Para instalar o framework, basta importar o código do projeto para o eclipse,
+To execute the project, import the folder to your IDE, eg. eclipse.
 
-criando um projeto que irá referenciar o projeto do framework.
+---
 
+OpenGL - Pinacoteca Universitária da UFAL
+===========
 
-A classe CGTemplate é a classe que o usuário deverá extender para aproveitar 
-suas funcionalidades.
-
-
-Todo Objeto a ser renderizado deverá extender a classe AutoDrawnableObject 
-e os comandos do JOGL para a renderizaçao do mesmo devem estar no método selfDraw.
+Usando OpenGL para renderizar a Pinacoteca Universitária da UFAL.
 
 
-Os objetos deverão ser adicionados no método initObjects da classe CGTemplate
+Instalação
+==
+
+Para executar o projeto, basta importar a pasta para sua IDE de utilização, ex. eclipse.
