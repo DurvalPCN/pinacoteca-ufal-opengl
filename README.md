@@ -4,7 +4,7 @@
 Using Open to render UFAL Art Gallery.
 
 
-Instalação
+Installing
 ==
 
 To execute the project, import the folder to your IDE, eg. eclipse.
