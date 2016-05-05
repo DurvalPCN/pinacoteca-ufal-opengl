@@ -11,7 +11,7 @@ import com.jogamp.opengl.util.texture.TextureIO;
 
 /**
  * @author Durval Pereira
- * @author Luís Gustavo
+ * @author Erivaldo Lourenço
  * 
  * @version 1.0
  */
@@ -35,6 +35,8 @@ public abstract class AutoDrawnableObject {
 					GLProfile.get(GLProfile.GL2), stream, false,
 					getTextureExtension());
 			texture = TextureIO.newTexture(data);
+			
+			
 		} catch (Exception exc) {
 			System.err
 					.println("Nao foi possivel gerar as texturas para a Classe:"

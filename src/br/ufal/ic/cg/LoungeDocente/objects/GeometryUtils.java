@@ -4,7 +4,7 @@ import javax.media.opengl.GL2;
 
 /**
  * @author Durval Pereira
- * @author Luís Gustavo
+ * @author Erivaldo Lourenço
  * 
  * @version 1.0
  */

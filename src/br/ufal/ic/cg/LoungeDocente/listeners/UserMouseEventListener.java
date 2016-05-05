@@ -9,7 +9,7 @@ import br.ufal.ic.cg.LoungeDocente.renderer.MovableCamera;
 
 /**
  * @author Durval Pereira
- * @author Luís Gustavo
+ * @author Erivaldo Lourenço
  * 
  * @version 1.0
  */

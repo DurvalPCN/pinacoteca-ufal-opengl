@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 
 /**
  * @author Durval Pereira
- * @author Luís Gustavo
+ * @author Erivaldo Lourenço
  * 
  * @version 1.0
  */

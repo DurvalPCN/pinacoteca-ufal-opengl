@@ -29,7 +29,7 @@ import br.ufal.ic.cg.LoungeDocente.objects.AutoDrawnableObject;
 
 /**
  * @author Durval Pereira
- * @author Luís Gustavo
+ * @author Erivaldo Lourenço
  * 
  * @version 1.0
  */
@@ -38,11 +38,15 @@ public class MovableCameraImpl extends MovableCamera {
 
 	private PortaExterna porta;
 	
-	private float[] ambientLight = { 1f, 1f, 1f, 1f };
-	private float[] diffuseLight = { .2f, .2f, .2f, 1f };
-	private float[] lightColorSpecular = { 0.8f, 0.8f, 0.8f, 1.0f };
+	private float[] ambientLight = { 0.0f, 0.0f, 0.0f, 1.0f };
+	private float[] diffuseLight = { 1.0f, 1.0f, 1.0f, 1.0f };
+	private float[] lightColorSpecular = { 1.0f, 1.0f, 1.0f, 1.0f };
 	private float[] lightPos = { 10f, -10f, 8f, 1f };
-
+	
+//	private float[] modelAmbient = { 0.4f, 0.4f, 0.4f, 1.0f };
+//	private float[] localView = { 0.0f };
+	
+	public boolean light;
 	/**
 	 * 
 	 */
@@ -86,7 +90,7 @@ public class MovableCameraImpl extends MovableCamera {
 	 */
 	@Override
 	public void display(GLAutoDrawable drawable) {
-
+		
 		GL2 gl = drawable.getGL().getGL2();
 
 		gl.glClear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT);
@@ -107,7 +111,13 @@ public class MovableCameraImpl extends MovableCamera {
 			obj.unbindTexture();
 			gl.glPopMatrix();
 		}
-
+		if(this.light){
+			gl.glEnable(GL2.GL_LIGHTING);
+//			System.out.println("ATIVEI");
+		}else{
+			gl.glDisable(GL2.GL_LIGHTING);
+//			System.out.println("DESATIVEI");
+		}
 		gl.glTranslatef(lightPos[0], lightPos[1], lightPos[2]);
 		gl.glColor3f(1f, 1f, 1f);
 
@@ -163,19 +173,34 @@ public class MovableCameraImpl extends MovableCamera {
 	}
 
 	private void initLight(GL2 gl) {
-		gl.glEnable(GL2.GL_LIGHTING);
 
-		gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_AMBIENT, ambientLight, 0);
-		gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_DIFFUSE, diffuseLight, 0);
-		gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_SPECULAR, lightColorSpecular, 0);
-
-		gl.glEnable(GL2.GL_LIGHT0);
-
-		float[] rgba = { 1f, 1f, 1f };
-		gl.glMaterialfv(GL2.GL_FRONT, GL2.GL_SPECULAR, rgba, 0);
-
-		gl.glEnable(GL2.GL_COLOR_MATERIAL);
-
+	    float ambient[] =
+	    { 0.0f, 0.0f, 0.0f, 1.0f };
+	    float diffuse[] =
+	    { 1.0f, 1.0f, 1.0f, 1.0f };
+	    float specular[] =
+	    { 1.0f, 1.0f, 1.0f, 1.0f };
+	    float position[] =
+	    { 0.0f, 3.0f, 2.0f, 0.0f };
+	    float lmodel_ambient[] =
+	    { 0.4f, 0.4f, 0.4f, 1.0f };
+	    float local_view[] =
+	    { 0.0f };
+	 
+	    gl.glEnable(GL.GL_DEPTH_TEST);
+	    gl.glDepthFunc(GL.GL_LESS);
+	 
+	    gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_AMBIENT, ambient, 0);
+	    gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_DIFFUSE, diffuse, 0);
+	    gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_POSITION, position, 0);
+	    gl.glLightModelfv(GL2.GL_LIGHT_MODEL_AMBIENT, lmodel_ambient, 0);
+	    gl.glLightModelfv(GL2.GL_LIGHT_MODEL_LOCAL_VIEWER, local_view, 0);
+	 
+	    gl.glEnable(GL2.GL_LIGHTING);
+	    gl.glEnable(GL2.GL_LIGHT0);
+	    this.light = true;
+	    gl.glClearColor(0.0f, 0.1f, 0.1f, 0.0f);
+	    
 	}
 
 	public void processKeyPressed(final char c) {
@@ -190,6 +215,16 @@ public class MovableCameraImpl extends MovableCamera {
 					break;
 				case 'c':
 					porta.closeDoor();
+					break;
+				case 'l':
+					System.out.println("APERTOU L");
+					if(light){
+						System.out.println("AGORA E FALSO");
+						light = false;
+					}else{
+						light = true;
+						System.out.println("AGORA E VERDADEIRO");
+					}
 					break;
 
 				}

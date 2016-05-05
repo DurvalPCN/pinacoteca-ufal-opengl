@@ -25,7 +25,6 @@ public class Extintor extends AutoDrawnableObject {
 
 		gl.glNewList(startList, GL2.GL_COMPILE);
 		{
-
 			gl.glBegin(GL2.GL_POLYGON); // TV
 			{
 				gl.glTexCoord2f(0f, 0f);gl.glVertex3f(0, 0, 0);
@@ -36,6 +35,8 @@ public class Extintor extends AutoDrawnableObject {
 			gl.glEnd();
 		}
 		gl.glEndList();
+		
+		
 
 	}
 

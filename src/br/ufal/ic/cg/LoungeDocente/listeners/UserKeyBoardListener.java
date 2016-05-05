@@ -9,7 +9,7 @@ import br.ufal.ic.cg.LoungeDocente.renderer.MovableCamera;
 
 /**
  * @author Durval Pereira
- * @author Luís Gustavo
+ * @author Erivaldo Lourenço
  * 
  * @version 1.0
  */
@@ -31,7 +31,7 @@ public class UserKeyBoardListener implements KeyListener {
 			public void run() {
 				while (run) {
 					try {
-						Thread.sleep(30);
+						Thread.sleep(5);
 					} catch (InterruptedException e) {
 					}
 					if (pressed.size() > 0)

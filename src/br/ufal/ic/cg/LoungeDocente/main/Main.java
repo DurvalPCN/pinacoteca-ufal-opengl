@@ -15,7 +15,7 @@ import com.jogamp.opengl.util.Animator;
 
 /**
  * @author Durval Pereira
- * @author Luís Gustavo
+ * @author Erivaldo Lourenço
  * 
  * @version 1.0
  */

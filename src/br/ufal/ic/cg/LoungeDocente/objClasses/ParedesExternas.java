@@ -100,7 +100,7 @@ public class ParedesExternas extends AutoDrawnableObject {
 			gl.glEnd();
 		}
 		gl.glEndList();
-
+		
 	}
 
 	@Override
