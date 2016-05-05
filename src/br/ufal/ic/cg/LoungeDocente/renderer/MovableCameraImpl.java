@@ -175,17 +175,17 @@ public class MovableCameraImpl extends MovableCamera {
 	private void initLight(GL2 gl) {
 
 	    float ambient[] =
-	    { 0.0f, 0.0f, 0.0f, 1.0f };
+	    { 0.8f, 0.8f, 1.0f, 1.0f };
 	    float diffuse[] =
 	    { 1.0f, 1.0f, 1.0f, 1.0f };
 	    float specular[] =
 	    { 1.0f, 1.0f, 1.0f, 1.0f };
 	    float position[] =
-	    { 0.0f, 3.0f, 2.0f, 0.0f };
+	    { 1.0f, 1.0f, 1.0f, 0.0f };
 	    float lmodel_ambient[] =
-	    { 0.4f, 0.4f, 0.4f, 1.0f };
+	    { 1.0f, 1.0f, 1.0f, 1.0f };
 	    float local_view[] =
-	    { 0.0f };
+	    { 0.8f };
 	 
 	    gl.glEnable(GL.GL_DEPTH_TEST);
 	    gl.glDepthFunc(GL.GL_LESS);
@@ -198,9 +198,25 @@ public class MovableCameraImpl extends MovableCamera {
 	 
 	    gl.glEnable(GL2.GL_LIGHTING);
 	    gl.glEnable(GL2.GL_LIGHT0);
-	    this.light = true;
-	    gl.glClearColor(0.0f, 0.1f, 0.1f, 0.0f);
+	    gl.glLightModeli(GL2.GL_LIGHT_MODEL_LOCAL_VIEWER, GL2.GL_TRUE);
 	    
+//	    gl.glClearColor(0.0f, 0.1f, 0.1f, 0.0f);
+	    
+	    gl.glEnable(GL2.GL_LIGHT0);
+	    
+	  //15º de abertura
+	  gl.glLightf(GL2.GL_LIGHT0, GL2.GL_SPOT_CUTOFF, 45); 
+	   
+	  //Definimos a direção: para direita
+	  float spotDirection[] = {0.1f, 0.0f, 0.0f};
+	  gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_SPOT_DIRECTION, spotDirection,0);
+	   
+	  //Definimos um expoente pequeno.
+	  gl.glLightf(GL2.GL_LIGHT0, GL2.GL_SPOT_EXPONENT, (float) 20.0);
+	  gl.glLightf( GL2.GL_LIGHT0, GL2.GL_SPOT_CUTOFF,   (float) 10.0);
+	  
+	  gl.glClearColor(0.0f, 0.1f, 0.1f, 0.0f);
+	  this.light = true;
 	}
 
 	public void processKeyPressed(final char c) {
