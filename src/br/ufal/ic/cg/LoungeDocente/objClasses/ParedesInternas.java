@@ -41,8 +41,8 @@ public class ParedesInternas extends AutoDrawnableObject {
 			{
 				gl.glTexCoord2f(0, 0);gl.glVertex3f(25, 0, 0f);
 				gl.glTexCoord2f(0, 1);gl.glVertex3f(25, 0, 15.75f);
-				gl.glTexCoord2f(1, 1);gl.glVertex3f(25, 75.5f, 15.75f);
-				gl.glTexCoord2f(1, 0);gl.glVertex3f(25, 75.5f, 0f);
+				gl.glTexCoord2f(1, 1);gl.glVertex3f(25, 65.5f, 15.75f);
+				gl.glTexCoord2f(1, 0);gl.glVertex3f(25, 65.5f, 0f);
 			}
 			gl.glEnd();
 		}
@@ -65,8 +65,8 @@ public class ParedesInternas extends AutoDrawnableObject {
 		{
 			gl.glBegin(GL2.GL_POLYGON);
 			{
-				gl.glTexCoord2f(0, 0);gl.glVertex3f(0, 0, 0f);
-				gl.glTexCoord2f(0, 1);gl.glVertex3f(0, 0, 15.75f);
+				gl.glTexCoord2f(0, 0);gl.glVertex3f(5, 0, 0f);
+				gl.glTexCoord2f(0, 1);gl.glVertex3f(5, 0, 15.75f);
 				gl.glTexCoord2f(1, 1);gl.glVertex3f(25, 0, 15.75f);
 				gl.glTexCoord2f(1, 0);gl.glVertex3f(25, 0, 0f);
 			}
@@ -161,7 +161,28 @@ public class ParedesInternas extends AutoDrawnableObject {
 			gl.glCallList(startList+4); // media parede esquerda
 		}
 		gl.glPopMatrix();
-			
+
+		gl.glPushMatrix();
+		{
+			gl.glTranslatef(-30, 65.5f, 0);
+			gl.glCallList(startList+4); // media parede esquerda TRASEIRA
+		}
+		gl.glPopMatrix();
+
+		gl.glPushMatrix();
+		{
+			gl.glTranslatef(20, 65.5f, 0);
+			gl.glCallList(startList+4); // media parede direita TRASEIRA
+		}
+		gl.glPopMatrix();
+
+		gl.glPushMatrix();
+		{
+			gl.glTranslatef(40, 65.5f, 0);
+			gl.glCallList(startList+4); // media parede direita TRASEIRA CONTINUACAO
+		}
+		gl.glPopMatrix();
+				
 	}
 
 }

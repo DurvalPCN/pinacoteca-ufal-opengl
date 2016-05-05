@@ -13,6 +13,9 @@ import br.ufal.ic.cg.LoungeDocente.objClasses.Bancada;
 import br.ufal.ic.cg.LoungeDocente.objClasses.Extintor;
 import br.ufal.ic.cg.LoungeDocente.objClasses.Janelas;
 import br.ufal.ic.cg.LoungeDocente.objClasses.Cadeiras;
+import br.ufal.ic.cg.LoungeDocente.objClasses.LixeiroAmarelo;
+import br.ufal.ic.cg.LoungeDocente.objClasses.LixeiroAzul;
+import br.ufal.ic.cg.LoungeDocente.objClasses.LixeiroVerde;
 import br.ufal.ic.cg.LoungeDocente.objClasses.LixeiroVermelho;
 import br.ufal.ic.cg.LoungeDocente.objClasses.Luminaria;
 import br.ufal.ic.cg.LoungeDocente.objClasses.Mesa;
@@ -90,6 +93,9 @@ public class MovableCameraImpl extends MovableCamera {
 		this.objects.add(new MolduraBranca(gl));
 		this.objects.add(new Bancada(gl));
 		this.objects.add(new LixeiroVermelho(gl));
+		this.objects.add(new LixeiroAzul(gl));
+		this.objects.add(new LixeiroAmarelo(gl));
+		this.objects.add(new LixeiroVerde(gl));
 
 	}
 

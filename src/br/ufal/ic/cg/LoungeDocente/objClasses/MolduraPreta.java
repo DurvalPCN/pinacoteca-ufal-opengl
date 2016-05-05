@@ -191,7 +191,7 @@ public class MolduraPreta extends AutoDrawnableObject {
 		// TRÁS
 		gl.glPushMatrix();
 		{
-			gl.glTranslatef(24.5f, 65f, 11);			
+			gl.glTranslatef(24.5f, 55f, 11);			
 			gl.glCallList(startList+3);
 		}
 		gl.glPopMatrix();
@@ -199,14 +199,14 @@ public class MolduraPreta extends AutoDrawnableObject {
 		// LADOS
 		gl.glPushMatrix();
 		{
-			gl.glTranslatef(24, 65f, 11);			
+			gl.glTranslatef(24, 55f, 11);			
 			gl.glCallList(startList+4);
 		}
 		gl.glPopMatrix();
 
 		gl.glPushMatrix();
 		{
-			gl.glTranslatef(24, 74f, 11);			
+			gl.glTranslatef(24, 64f, 11);			
 			gl.glCallList(startList+4);
 		}
 		gl.glPopMatrix();
@@ -214,14 +214,14 @@ public class MolduraPreta extends AutoDrawnableObject {
 		// TOPOS
 		gl.glPushMatrix();
 		{
-			gl.glTranslatef(24, 65f, 11);			
+			gl.glTranslatef(24, 55f, 11);			
 			gl.glCallList(startList+5);
 		}
 		gl.glPopMatrix();
 
 		gl.glPushMatrix();
 		{
-			gl.glTranslatef(24, 65f, 7);			
+			gl.glTranslatef(24, 55f, 7);			
 			gl.glCallList(startList+5);
 		}
 		gl.glPopMatrix();

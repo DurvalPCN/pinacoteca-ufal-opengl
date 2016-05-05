@@ -6,7 +6,7 @@ import br.ufal.ic.cg.LoungeDocente.objects.AutoDrawnableObject;
 
 /**
  * @author Durval Pereira
- * @author Luís Gustavo
+ * @author Erivaldo Filho
  * 
  * @version 1.0
  */

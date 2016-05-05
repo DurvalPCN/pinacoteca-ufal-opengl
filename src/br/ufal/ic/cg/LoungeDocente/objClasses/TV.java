@@ -56,7 +56,7 @@ public class TV extends AutoDrawnableObject {
 				
 		gl.glPushMatrix();
 		{
-			gl.glTranslatef(24, 65, 11);			
+			gl.glTranslatef(24, 55, 11);			
 			gl.glCallList(startList);
 		}
 		gl.glPopMatrix();

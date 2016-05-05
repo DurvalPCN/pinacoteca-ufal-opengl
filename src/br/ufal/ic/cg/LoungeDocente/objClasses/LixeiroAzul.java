@@ -11,11 +11,11 @@ import br.ufal.ic.cg.LoungeDocente.objects.AutoDrawnableObject;
  * @version 1.0
  */
 
-public class LixeiroVermelho extends AutoDrawnableObject {
+public class LixeiroAzul extends AutoDrawnableObject {
 
 	private int startList;
 
-	public LixeiroVermelho(GL2 gl) {
+	public LixeiroAzul(GL2 gl) {
 		super(gl);
 		desenhaPorta();
 	}
@@ -74,7 +74,7 @@ public class LixeiroVermelho extends AutoDrawnableObject {
 
 	@Override
 	protected String getTextureImg() {
-		return "red.jpg";
+		return "blue.jpg";
 	}
 
 	@Override
@@ -84,36 +84,36 @@ public class LixeiroVermelho extends AutoDrawnableObject {
 		
 		gl.glPushMatrix();
 		{
-			gl.glTranslatef(23, 45, 0);			
+			gl.glTranslatef(23, 50, 0);			
 			gl.glCallList(startList);
 		}
 		gl.glPopMatrix();
 				
 		gl.glPushMatrix();
 		{
-			gl.glTranslatef(24.5f, 45, 0);			
+			gl.glTranslatef(24.5f, 50, 0);			
 			gl.glCallList(startList);
 		}
 		gl.glPopMatrix();
 
 		gl.glPushMatrix();
 		{
-			gl.glTranslatef(23, 45, 0);			
+			gl.glTranslatef(23, 50, 0);			
 			gl.glCallList(startList+1);
 		}
 		gl.glPopMatrix();
 
 		gl.glPushMatrix();
 		{
-			gl.glTranslatef(23, 49, 0);			
+			gl.glTranslatef(23, 54, 0);			
 			gl.glCallList(startList+1);
 		}
 		gl.glPopMatrix();
-		
+
 		// parte baixo
 		gl.glPushMatrix();
 		{
-			gl.glTranslatef(23, 45, 1);			
+			gl.glTranslatef(23, 50, 1);			
 			gl.glCallList(startList+2);
 		}
 		gl.glPopMatrix();
