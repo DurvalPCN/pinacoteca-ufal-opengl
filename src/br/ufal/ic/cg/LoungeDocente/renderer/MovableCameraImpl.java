@@ -9,11 +9,15 @@ import javax.media.opengl.GL2;
 import javax.media.opengl.GLAutoDrawable;
 import javax.media.opengl.glu.GLU;
 
+import br.ufal.ic.cg.LoungeDocente.objClasses.Bancada;
 import br.ufal.ic.cg.LoungeDocente.objClasses.Extintor;
 import br.ufal.ic.cg.LoungeDocente.objClasses.Janelas;
 import br.ufal.ic.cg.LoungeDocente.objClasses.Cadeiras;
+import br.ufal.ic.cg.LoungeDocente.objClasses.LixeiroVermelho;
 import br.ufal.ic.cg.LoungeDocente.objClasses.Luminaria;
 import br.ufal.ic.cg.LoungeDocente.objClasses.Mesa;
+import br.ufal.ic.cg.LoungeDocente.objClasses.MolduraBranca;
+import br.ufal.ic.cg.LoungeDocente.objClasses.MolduraPreta;
 import br.ufal.ic.cg.LoungeDocente.objClasses.ParedesExternas;
 import br.ufal.ic.cg.LoungeDocente.objClasses.ParedesInternas;
 import br.ufal.ic.cg.LoungeDocente.objClasses.Pilastras;
@@ -82,6 +86,10 @@ public class MovableCameraImpl extends MovableCamera {
 		this.objects.add(new Janelas(gl));
 		this.objects.add(new Extintor(gl));
 		this.objects.add(new Placa(gl));
+		this.objects.add(new MolduraPreta(gl));
+		this.objects.add(new MolduraBranca(gl));
+		this.objects.add(new Bancada(gl));
+		this.objects.add(new LixeiroVermelho(gl));
 
 	}
 

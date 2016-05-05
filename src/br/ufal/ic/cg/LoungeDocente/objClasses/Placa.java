@@ -56,14 +56,14 @@ public class Placa extends AutoDrawnableObject {
 				
 		gl.glPushMatrix();
 		{
-			gl.glTranslatef(-20, 29.9f, 7);			
+			gl.glTranslatef(-20, 29.4f, 7);			
 			gl.glCallList(startList);
 		}
 		gl.glPopMatrix();
 		
 		gl.glPushMatrix();
 		{
-			gl.glTranslatef(-10, 29.9f, 7);			
+			gl.glTranslatef(-10, 29.4f, 7);			
 			gl.glCallList(startList);
 		}
 		gl.glPopMatrix();

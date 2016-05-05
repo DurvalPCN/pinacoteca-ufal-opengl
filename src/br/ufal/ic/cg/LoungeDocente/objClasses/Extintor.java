@@ -57,7 +57,7 @@ public class Extintor extends AutoDrawnableObject {
 				
 		gl.glPushMatrix();
 		{
-			gl.glTranslatef(-14f, 29.9f, 6);			
+			gl.glTranslatef(-14.35f, 29.9f, 6);			
 			gl.glCallList(startList);
 		}
 		gl.glPopMatrix();

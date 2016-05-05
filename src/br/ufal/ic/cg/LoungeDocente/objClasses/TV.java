@@ -30,8 +30,8 @@ public class TV extends AutoDrawnableObject {
 			{
 				gl.glTexCoord2f(0f, 0f);gl.glVertex3f(0, 0, 0);
 				gl.glTexCoord2f(0f, 1f);gl.glVertex3f(0, 0, 4f);
-				gl.glTexCoord2f(1f, 1f);gl.glVertex3f(-6, 9, 4f);
-				gl.glTexCoord2f(1f, 0f);gl.glVertex3f(-6, 9, 0);
+				gl.glTexCoord2f(1f, 1f);gl.glVertex3f(0, 9, 4f);
+				gl.glTexCoord2f(1f, 0f);gl.glVertex3f(0, 9, 0);
 			}
 			gl.glEnd();
 		}
@@ -56,7 +56,7 @@ public class TV extends AutoDrawnableObject {
 				
 		gl.glPushMatrix();
 		{
-			gl.glTranslatef(25, 65, 11);			
+			gl.glTranslatef(24, 65, 11);			
 			gl.glCallList(startList);
 		}
 		gl.glPopMatrix();
