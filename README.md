@@ -23,7 +23,7 @@ To install Eclipse, download the IDE clicking <a href='https://eclipse.org/downl
 
 <h2>Running the project</h2>
 
-To execute the project, create a folder, pull the repository inside and import the created folder containing the reposity to your IDE, eg. eclipse.
+To execute the project, pull the repository and import the folder containing the reposity to your IDE, eg. Eclipse.
 
 <h2>References</h2>
 
